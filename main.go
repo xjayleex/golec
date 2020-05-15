@@ -1,14 +1,12 @@
 package main
 import (
-	"./dict"
-	"fmt"
+	"./urlchecker"
 )
 func main() {
-	dictionary := dict.Dictionary{"first": "First word"}
-	definition, err := dictionary.Search("first")
-	if err != nil {
-		fmt.Println(err)
-	} else{
-		fmt.Println(definition)
+	urls := [] string {
+		"http://www.airbnb.com/",
+		"http://www.naver.com/",
 	}
+	urlchecker.DoCheck(urls)
+
 }

@@ -50,3 +50,4 @@ func (a Account) String() string { // equiv toString()
 	return fmt.Sprint(a.Owner(), "'s account.\nHas:",
 		a.balance)
 }
+
