@@ -10,4 +10,6 @@ func main(){
 	fmt.Println(account)
 	account.Deposit(30)
 	fmt.Println(account.Balance())
+	account.Withdraw(10)
+	fmt.Println(account.Balance())
 }
