@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-)
 
+)
 type ResultMap map[string]int
 
 var (
@@ -14,6 +14,8 @@ var (
 
 
 func hitURL(url string) int {
+
+
 	fmt.Println("Checking:", url)
 	resp, err := http.Get(url)
 	if err != nil || resp.StatusCode >= 400{
