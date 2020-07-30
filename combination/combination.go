@@ -8,14 +8,15 @@ type Combination struct {
 	list *list.List
 }
 
-func (comb *Combination) setParams(N, C int) *Combination {
+func (comb *Combination) SetParams(N, C int) *Combination {
 	(*comb).n = N
 	(*comb).c = C
 	(*comb).list = list.New()
 	return comb
 }
 
-func (comb *Combination) getLists() *list.List {
+func (comb *Combination) GetLists() *list.List {
+	comb.makeCombination()
 	return (*comb).list
 }
 
