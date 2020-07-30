@@ -42,8 +42,8 @@ func (comb *Combination) dfs(idx,cnt,target int, selected []bool) {
 	}
 }
 
-func New() Combination{
-	return Combination{
+func New() *Combination{
+	return &Combination{
 		n : 0,
 		c : 0,
 		list : list.New(),
