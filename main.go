@@ -1,14 +1,17 @@
 package main
 
 import "fmt"
+import combi "./combination"
 
 func main(){
-	i := 1
-	j := 99
-	fmt.Println(&i,&j)
-	i, j = j ,i
-	fmt.Println(i, j)
-	fmt.Println(&i,&j)
-	//scrapper.Scrape("scala")
+	cb := combi.New()
+	cb.SetParams(5,3)
+	li := cb.GetLists()
+	fmt.Println(li.Len())
+	for li.Len() > 0 {
+		elem := li.Front()
+		fmt.Println(elem.Value)
+		li.Remove(elem)
+	}
 }
 

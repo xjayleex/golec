@@ -16,7 +16,7 @@ func (comb *Combination) SetParams(N, C int) *Combination {
 }
 
 func (comb *Combination) GetLists() *list.List {
-	comb.makeCombination()
+	(*comb).makeCombination()
 	return (*comb).list
 }
 
