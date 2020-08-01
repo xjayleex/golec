@@ -44,7 +44,7 @@ func (ih *itemHeap) Pop()(x interface{}){
 	return item
 }
 
-
+/* it's minheap by default. If u want use as a maxheap, set the priorty value as minus value.*/
 type PriorityQueue struct{
 	itemHeap *itemHeap
 
@@ -59,7 +59,7 @@ func New() PriorityQueue{
 func (p *PriorityQueue) Len() int {
 	return p.itemHeap.Len()
 }
-
+/* it's minheap by default. If u want use as a maxheap, set the priorty value as minus value.*/
 func (p *PriorityQueue) Push(v interface{}, priority int){
 
 	newItem := &Item{
@@ -68,7 +68,7 @@ func (p *PriorityQueue) Push(v interface{}, priority int){
 	}
 	heap.Push(p.itemHeap, newItem)
 }
-
+/* it's minheap by default. If u want use as a maxheap, set the priorty value as minus value.*/
 func (p *PriorityQueue) Pop() (interface{}){
 	if len(*p.itemHeap) == 0 {
 		return nil
